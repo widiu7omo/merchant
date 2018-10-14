@@ -1,15 +1,14 @@
 <body>
     <div id="app" class="uk-container-expand">
-        <navbar></navbar>
-        
+            <navbar></navbar>
+            
         <div class="uk-container">
-                <banner :banners="bisnis_pages" :sub_base_url="base_url"></banner>
-                <pict :names="bisnis_pages" :sub_base_url="base_url" ></pict>
-                <info :sub_titles="bisnis_pages" :number="main_descs.number" 
-                :twitter="main_descs.twitter" :instagram="main_descs.instagram" :facebook="main_descs.facebook"
-                 :sub_base_url="base_url"></info>  
+            <banner :banners="bisnis_pages" :sub_base_url="base_url"></banner>
+            <pict :names="bisnis_pages" :number="main_descs.number" 
+                  :twitter="main_descs.twitter" :instagram="main_descs.instagram" :facebook="main_descs.facebook" :sub_base_url="base_url" ></pict>
+            <info :sub_titles="bisnis_pages" :number="main_descs.number" :sub_base_url="base_url"></info>  
         </div>
-        
+            
         <div class="uk-container uk-padding-small uk-padding-remove-right">
             <h4 class="uk-text-bold uk-heading-line"><span>Paket Populer</span></h4>
             <listamazing :sub_base_url="base_url"></listamazing>  
@@ -18,7 +17,7 @@
             <h4 class="uk-text-bold uk-heading-line"><span>Best Seller</span></h4>
             <listamazing :sub_base_url="base_url"></listamazing>  
         </div>
-        
+            
     </div>
     <!-- End of App Vue -->
 
@@ -30,10 +29,10 @@
                 bisnis_pages:[],
                 //main_url:'http://random.host:8888/magang/codeigniter/admin2/index.php/',
                 //base_url:'http://random.host:8888/magang/codeigniter/admin2/',
-                // main_url:'http://localhost/proto/prototype/admin2/index.php/',
-                // base_url:'http://localhost/proto/prototype/admin2/',
-                main_url:'http://phinemoo.com/merchant/index.php/',
-                base_url:'http://phinemoo.com/merchant/',
+                main_url:'http://localhost/proto/merchant/index.php/',
+                base_url:'http://localhost/proto/merchant/',
+                //main_url:'https://phinemo.com/merchant/index.php/',
+                //base_url:'https://phinemo.com/merchant/',
                 main_descs:[]
             },
             components: {
@@ -51,12 +50,12 @@
             methods:{
                 tampil(){
                     axios
-                        .get(this.main_url+'C_bisnispage/showDetail/<?php echo $operator ?>')
+                        .get(this.main_url+'user/C_bisnispage/showDetail/<?php echo $operator ?>')
                         .then(response => (this.bisnis_pages = response.data.title))
                 },
                 detail(){
                     axios
-                        .get(this.main_url+'C_bisnispage/showDetailProduct/<?php echo $operator ?>')
+                        .get(this.main_url+'user/C_bisnispage/showDetailProduct/<?php echo $operator ?>')
                         .then(response => (this.main_descs = response.data))
                 }
             }

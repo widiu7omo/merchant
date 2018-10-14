@@ -11,7 +11,7 @@ class C_bisnispage extends CI_Controller {
 
     public function showDetail()
     {
-        $key='126';
+        $key='127';
         $where = array('id_operator'=>$key);
         $result['title']  = $this->M_bisnispage->getProduct($where)->result();
         echo json_encode($result);
@@ -19,7 +19,7 @@ class C_bisnispage extends CI_Controller {
 
     public function showDetailProduct()
     {   
-        $key='126';
+        $key='127';
         $where = array('id_operator'=>$key);
         $result['detail']  = $this->M_bisnispage->getProductDetail($where)->result();
         foreach ($result['detail'] as $row){
@@ -30,7 +30,7 @@ class C_bisnispage extends CI_Controller {
 
     public function index()
     {
-        $key='126';
+        $key='127';
         $where = array('operator'=>$key);
         $this->load->view('user/header_vue');
         $this->load->view('user/v_bisnispage',$where);
