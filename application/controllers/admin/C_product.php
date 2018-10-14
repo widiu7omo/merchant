@@ -186,8 +186,7 @@ class C_product extends CI_Controller {
     }
     public function autokota(){
         
-        if (isset($_GET['nama_kota'])){
-            $result = $this->M_product->search_city($_GET['nama_kota']);
+            $result = $this->M_product->search_city();
             // var_dump($result);
             if (count($result) > 0){
                 foreach ($result as $row){
@@ -196,12 +195,10 @@ class C_product extends CI_Controller {
                 }
                 echo json_encode($arr_result);
             }
-        }
     }
     public function autooperator(){
         
-        if (isset($_GET['nama_operator'])){
-            $result = $this->M_product->search_operator($_GET['nama_operator']);
+            $result = $this->M_product->search_operator();
             // var_dump($result);
             if (count($result) > 0){
                 foreach ($result as $row){
@@ -210,7 +207,6 @@ class C_product extends CI_Controller {
                 }
                 echo json_encode($arr_result);
             }
-        }
     }
     public function autojenis(){
             $result = $this->M_product->search_jenis();

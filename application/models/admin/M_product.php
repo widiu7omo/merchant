@@ -35,20 +35,20 @@ class M_product extends CI_Model {
         $this->db->delete($table);
     }
     //autocomplete
-    public function search_city($key){
-        $this->db->like('nama_kota', $key, 'both');
+    public function search_city(){
+        // $this->db->like('nama_kota', $key, 'both');
         $this->db->order_by('nama_kota', 'asc');
-        $this->db->limit(10);
+        // $this->db->limit(10);
         return $this->db->get('kota')->result();
     }
     public function search_jenis(){
         $this->db->order_by('jenis_tour', 'asc');
         return $this->db->get('jenis')->result();
     }
-    public function search_operator($key){
-        $this->db->like('nama_operator', $key, 'both');
+    public function search_operator(){
+        // $this->db->like('nama_operator', 'both');
         $this->db->order_by('nama_operator', 'asc');
-        $this->db->limit(10);
+        // $this->db->limit(10);
         return $this->db->get('operator')->result();
     }
     // ===========MEDIA QUERY=============

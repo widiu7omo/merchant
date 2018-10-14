@@ -34,9 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="box-body">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Operator</label>
-								<input type="text" class="form-control" name="touroperator" id="touroperator" placeholder="Enter your name" value="<?php 
-								 if (!empty($operator)) echo $operator[0]->nama_operator; else echo "";
-								 ?>">
+								<!-- <input type="text" class="form-control" name="touroperator" id="touroperator" placeholder="Enter your name" value="<?php 
+								// if (!empty($operator)) echo $operator[0]->nama_operator; else echo "";
+								 ?>"> -->
+								<select class="form-control select2" style="width: 100%;" id="touroperator" name="touroperator"></select>
+
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Nama Product</label>
@@ -58,7 +60,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="row">
 									<div class="col-xs-6">
 										<label for="exampleInputEmail1">Kota</label>
-										<input type="text" class="form-control" name="kotaproduct" id="kota" placeholder="Pilih kota" value="<?php if(!empty($kota))echo $kota[0]->nama_kota;else echo "";?>">
+										<select class="form-control select2" style="width: 100%;" id="kota" name="kotaproduct"></select>
+										<!-- <input type="text" class="form-control" name="kotaproduct" id="kota" placeholder="Pilih kota" value="<?php // if(!empty($kota))echo $kota[0]->nama_kota;else echo "";?>"> -->
 									</div>
 									<div class="col-xs-6">
 										<label>Jenis Tour</label>

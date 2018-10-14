@@ -38,6 +38,8 @@
 
 <!-- FastClick -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!-- Select 2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url('admintemplate/dist/js/adminlte.min.js')?>"></script>
 <!-- Sparkline -->
@@ -49,8 +51,8 @@
 <!-- ChartJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!-- <script src="<?php //echo base_url('admintemplate/dist/js/pages/dashboard2.js')?>"></script> -->
-<script src="https://drive.google.com/uc?export=download&id=1aCvomufuguJpIfrHv8LKBdwa2x9t8g4m" type="text/javascript"></script>
+<script src="<?php echo base_url('admintemplate/dist/js/pages/dashboard2.js')?>"></script>
+<!-- <script src="https://drive.google.com/uc?export=download&id=1aCvomufuguJpIfrHv8LKBdwa2x9t8g4m" type="text/javascript"></script> -->
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('admintemplate/dist/js/demo.js')?>"></script>
@@ -113,20 +115,48 @@
 			placeholder: 'write your description here',
 			height: "300px",
 		});
-		$('#kota').autocomplete({
-			source: function (req, res) {
-				$.getJSON("<?php echo site_url('product/autokota/')?>", {
-					nama_kota: req.term
-				}, res);
-			}
-		});
-		$('#touroperator').autocomplete({
-			source: function (req, res) {
-				$.getJSON("<?php echo site_url('product/autooperator/')?>", {
-					nama_operator: req.term
-				}, res);
-			}
-		});
+		// $('#kota').autocomplete({
+		// 	source: function (req, res) {
+		// 		$.getJSON("<?php //echo site_url('product/autokota/')?>", {
+		// 			nama_kota: req.term
+		// 		}, res);
+		// 	}
+		// });
+		// $('#touroperator').autocomplete({
+		// 	source: function (req, res) {
+		// 		$.getJSON("<?php //echo site_url('product/autooperator/')?>", {
+		// 			nama_operator: req.term
+		// 		}, res);
+		// 	}
+		// });
+		$.getJSON('<?php echo site_url("product/autooperator/")?>',
+			function (data) {
+				var html = '';
+				var len = data.length;
+				for (var i = 0; i < len; i++) {
+					if (data[i] == "<?php if(isset($operator)) echo $operator[0]->nama_operator ?>") {
+						html += '<option selected value="' + data[i] + '">' + data[i] + '</option>';
+					} else {
+						html += '<option value="' + data[i] + '">' + data[i] + '</option>';
+					}
+
+				}
+				$('select#touroperator').append(html);
+			});
+		$.getJSON('<?php echo site_url("product/autokota/")?>',
+			function (data) {
+				var html = '';
+				var len = data.length;
+				for (var i = 0; i < len; i++) {
+					if (data[i] == "<?php if(isset($kota)) echo $kota[0]->nama_kota ?>") {
+						html += '<option selected value="' + data[i] + '">' + data[i] + '</option>';
+					} else {
+						html += '<option value="' + data[i] + '">' + data[i] + '</option>';
+					}
+
+				}
+				$('select#kota').append(html);
+			});
 		$.getJSON('<?php echo site_url("product/autojenis/")?>',
 			function (data) {
 				var html = '';
@@ -229,7 +259,7 @@
 <script>
 	$(function () {
 		//Initialize Select2 Elements
-		// $('.select2').select2()
+		$('.select2').select2();
 
 		//Datemask dd/mm/yyyy
 		// $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
