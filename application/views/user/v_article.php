@@ -60,10 +60,10 @@
                 ],
                 //mainUrl:'http://random.host:8888/magang/codeigniter/admin2/index.php/',
                 //baseUrl:'http://random.host:8888/magang/codeigniter/admin2/',
-                mainUrl:'http://localhost/admin2/index.php/',
-                baseUrl:'http://localhost/admin2/',
-                // mainUrl:'http://phinemo.com/admin2/index.php/',
-                // baseUrl:'http://phinemo.com/admin2/',
+                // mainUrl:'http://localhost/admin2/index.php/',
+                // baseUrl:'http://localhost/admin2/',
+                mainUrl:'http://phinemoo.com/merchant/index.php/',
+                baseUrl:'http://phinemoo.com/merchant/',
                 offs:[],
             },
             // props:['offers'],
@@ -81,7 +81,7 @@
             methods:{
                 tampil(){
                     axios
-                        .get(this.mainUrl+'C_article/showoffers')
+                        .get(this.mainUrl+'article/showoffers')
                         .then(response => (this.offs = response.data.offers))
                 }
             }

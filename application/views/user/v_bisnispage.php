@@ -30,10 +30,10 @@
                 bisnis_pages:[],
                 //main_url:'http://random.host:8888/magang/codeigniter/admin2/index.php/',
                 //base_url:'http://random.host:8888/magang/codeigniter/admin2/',
-                main_url:'http://localhost/proto/prototype/admin2/index.php/',
-                base_url:'http://localhost/proto/prototype/admin2/',
-                //main_url:'http://phinemo.com/merchant/index.php/',
-                //base_url:'http://phinemo.com/merchant/',
+                // main_url:'http://localhost/proto/prototype/admin2/index.php/',
+                // base_url:'http://localhost/proto/prototype/admin2/',
+                main_url:'http://phinemoo.com/merchant/index.php/',
+                base_url:'http://phinemoo.com/merchant/',
                 main_descs:[]
             },
             components: {

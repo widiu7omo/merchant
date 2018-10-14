@@ -51,7 +51,12 @@ class C_product extends CI_Controller {
         $jml_anggota = $this->input->post('jml_anggota');
         $harga = $this->input->post('harga');
         $deskripsi = $this->desc_encode();
-        $id_thumb = $id_media[0];
+        if ($id_media != NULL){
+            $id_thumb = $id_media[0];            
+        }
+        else {
+            $id_thumb = NULL;
+        }
         // $logo = $this->input->post('logo');
         // $splitString = explode('-', $range);
         $start = date("Y/m/d",strtotime($this->splitDate(0)));
@@ -138,7 +143,7 @@ class C_product extends CI_Controller {
 		$jml_anggota = $this->input->post('jml_anggota');
         $harga = $this->input->post('harga');
         $deskripsi = $this->desc_encode();
-        $id_thumb = $this->input->post('id_foto[0]');
+        // $id_thumb = $this->input->post('filefoto[0]');
         // $id_operator = $this->input->post('operator');
         $data = array(
             'nama_produk'=>$nama,
@@ -147,7 +152,7 @@ class C_product extends CI_Controller {
 			'jml_anggota'=>$jml_anggota,
 			'harga'=>str_replace('.','',$harga),
             'deskripsi' =>$deskripsi,
-            'id_thumb'=>$id_thumb,
+            // 'id_thumb'=>$id_thumb,
             'id_operator'=>$id_operator[0]->id_operator,
             'id_kota'=>$id_kota[0]->id_kota,
             'id_jenis'=>$id_jenis[0]->id_jenis,
@@ -158,7 +163,8 @@ class C_product extends CI_Controller {
             $get['product'] = $this->M_product->getwhere('produk',$where)->result();
             $result = json_decode($get['product'][0]->id_media);
             if($result[0] !=NULL){
-                $id_med = array_merge($result,$id_med); 
+                $id_med = array_merge($result,$id_med);
+                $data['id_thumb']  = $id_med[0]; 
             }
             $id_media_encode = json_encode($id_med);
             $data['id_media'] = $id_media_encode;
