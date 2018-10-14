@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php foreach ($product as $data){
 			// var_dump($gambar);
 			$deskripsi = json_decode($data->deskripsi);?>
-		<form role="form" class="form-validate" method="post" action="<?php echo base_url('index.php/C_product/update'); ?>      "
+		<form role="form" class="form-validate" method="post" action="<?php echo site_url('product/update'); ?>      "
 		 enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-6">

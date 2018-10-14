@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</ol>
 	</section>
 	<section class="content">
-		<form role="form" class="form-validate" method="post" action="<?php echo base_url('index.php/C_product/add'); ?>"
+		<form role="form" class="form-validate" method="post" action="<?php echo site_url('product/add'); ?>"
 		 enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-6">

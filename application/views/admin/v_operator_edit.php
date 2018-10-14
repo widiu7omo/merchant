@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php foreach ($operator as $data){
 			// var_dump($operator);
 		$medsos = json_decode($data->contact);?>
-		<form role="form" class="form-validate" method="post" action="<?php echo base_url('index.php/C_operator/update'); ?>      "
+		<form role="form" class="form-validate" method="post" action="<?php echo site_url('operator/update'); ?>      "
 		 enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-6">

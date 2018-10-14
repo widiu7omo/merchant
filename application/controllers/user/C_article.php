@@ -7,7 +7,7 @@ class C_article extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_article');
+        $this->load->model('user/M_article');
     }
     // fetching product
     public function showOffers()
@@ -57,9 +57,9 @@ class C_article extends CI_Controller {
         $data['offer'] = $this->M_article->getProduct()->result();
         $dat['json'] = json_encode($data['offer']);
         // var_dump($dat);
-        $this->load->view('header_vue');
-        $this->load->view('v_article');
-        $this->load->view('footer_vue');
+        $this->load->view('user/header_vue');
+        $this->load->view('user/v_article');
+        $this->load->view('user/footer_vue');
     }
 
 }

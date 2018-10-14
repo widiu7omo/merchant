@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="box-header">
 						<h3 class="box-title">Data Produk</h3>
 						<div align="right">
-						<?php echo anchor("C_product/toadd","<div ><button class='btn btn-primary '>Tambah Product</button></div>"); ?>
+						<?php echo anchor("product/toadd","<div ><button class='btn btn-primary '>Tambah Product</button></div>"); ?>
 							<!-- <button class="btn btn-warning sendata" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button> -->
 						</div>
 					</div>
@@ -60,8 +60,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<td>".$price."</td>
 						<td>
 						<div class='row'>";
-							echo anchor("C_product/getdatawhere/".$data->id_produk,"<div class='col-xs-6 col-md-6'><button class='btn btn-primary glyphicon glyphicon-pencil'></button></div>");
-							echo anchor('C_product/delete/'.$data->id_produk,'<div class="col-xs-6 col-md-6"><button class="btn btn-primary glyphicon glyphicon-trash"></button></div>
+							echo anchor("product/getdatawhere/".$data->id_produk,"<div class='col-xs-6 col-md-6'><button class='btn btn-primary glyphicon glyphicon-pencil'></button></div>");
+							echo anchor('product/delete/'.$data->id_produk,'<div class="col-xs-6 col-md-6"><button class="btn btn-primary glyphicon glyphicon-trash"></button></div>
 						</div>
 						</td></tr>');}
 					?>

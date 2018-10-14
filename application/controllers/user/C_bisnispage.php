@@ -6,7 +6,7 @@ class C_bisnispage extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_bisnispage');
+        $this->load->model('user/M_bisnispage');
     }
 
     public function showDetail()
@@ -32,9 +32,9 @@ class C_bisnispage extends CI_Controller {
     {
         $key='126';
         $where = array('operator'=>$key);
-        $this->load->view('header_vue');
-        $this->load->view('v_bisnispage',$where);
-        $this->load->view('footer_vue');
+        $this->load->view('user/header_vue');
+        $this->load->view('user/v_bisnispage',$where);
+        $this->load->view('user/footer_vue');
     }
 
 }

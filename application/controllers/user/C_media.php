@@ -6,11 +6,11 @@ class C_media extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('header');
-        $this->load->view('navbar');
-        $this->load->view('v_media');
-        $this->load->view('bottombar');
-        $this->load->view('footer');
+        $this->load->view('user/header');
+        $this->load->view('user/navbar');
+        $this->load->view('user/v_media');
+        $this->load->view('user/bottombar');
+        $this->load->view('user/footer');
     }
 
 }

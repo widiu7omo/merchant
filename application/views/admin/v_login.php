@@ -1,6 +1,6 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="<?php echo site_url('admin/index') ?>"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -41,7 +41,7 @@
     <!-- /.social-auth-links -->
 
     <a href="#">I forgot my password</a><br>
-    <a href="<?php echo site_url('C_signup/index') ?>" class="text-center">Register a new membership</a>
+    <a href="<?php echo site_url('signup') ?>" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->

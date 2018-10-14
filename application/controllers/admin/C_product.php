@@ -7,11 +7,11 @@ class C_product extends CI_Controller {
     public function __construct(){
         parent::__construct();
         if($this->session->userdata('status') != "login"){
-			redirect(site_url("C_login"));
+			redirect(site_url("login"));
 		}
         // redirect(site_url("C_auth"));
         $this->load->helper('url');
-        $this->load->model(array('M_product','M_login'));
+        $this->load->model(array('admin/M_product','admin/M_login'));
         $this->load->library('upload');
     }
 
@@ -25,11 +25,11 @@ class C_product extends CI_Controller {
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
 
         $data['gambar'] = array();
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_product_tambah');
-        $this->load->view('bottombar');
-        $this->load->view('footer');
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_product_tambah');
+        $this->load->view('admin/bottombar');
+        $this->load->view('admin/footer');
     }
     
     public function add(){
@@ -73,7 +73,7 @@ class C_product extends CI_Controller {
         // var_dump(json_encode($id_media));
 
         $this->M_product->insert('produk',$data_product);
-        redirect('C_product/');
+        redirect('product');
         }
 
     public function getdatawhere($id){
@@ -109,12 +109,12 @@ class C_product extends CI_Controller {
         // var_dump($data);
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
 
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_product_edit',$data);
-        $this->load->view('bottombar');
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_product_edit',$data);
+        $this->load->view('admin/bottombar');
         // var_dump($data);
-        $this->load->view('footer',$data);
+        $this->load->view('admin/footer',$data);
     }
     public function getMedia($key){
         
@@ -171,12 +171,12 @@ class C_product extends CI_Controller {
         // var_dump($data);
         // var_dump($where);
         $this->M_product->update('produk',$data,$where);
-        redirect('C_product/');
+        redirect('product');
     }
     public function delete($id){
         $where = array('id_produk'=> $id);
         $this->M_product->delete('produk',$where);
-        redirect('C_product/index');
+        redirect('product');
     }
     public function autokota(){
         
@@ -223,11 +223,11 @@ class C_product extends CI_Controller {
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
 
         $data = $this->getdata();
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_product',$data);
-        $this->load->view('bottombar');
-        $this->load->view('footer',$data);
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_product',$data);
+        $this->load->view('admin/bottombar');
+        $this->load->view('admin/footer',$data);
     }
     //another function
     public function socialencode(){

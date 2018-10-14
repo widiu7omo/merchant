@@ -35,6 +35,7 @@ class C_login extends CI_Controller{
 
 		}else{
 			echo "<script> alert('Username dan password salah !')</script>";
+			redirect(site_url('login'));
 		}
 	}
 

@@ -13,9 +13,9 @@ class C_signup extends CI_Controller {
     
     public function index()
     {
-        $this->load->view('header');
-        $this->load->view('v_signup');
-        $this->load->view('footer');
+        $this->load->view('admin/header');
+        $this->load->view('admin/v_signup');
+        $this->load->view('admin/footer');
     }
 
 }

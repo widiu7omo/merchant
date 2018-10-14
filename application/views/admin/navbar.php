@@ -1,11 +1,11 @@
 <header class="main-header box-material-md">
 
 	<!-- Logo -->
-	<a href="index2.html" class="logo">
+	<a href="<?php echo site_url('admin/index')?>" class="logo">
 		<!-- mini logo for sidebar mini 50x50 pixels -->
 		<span class="logo-mini"><b>P</b>M</span>
 		<!-- logo for regular state and mobile devices -->
-		<span class="logo-lg"><img height="30px" src="https://phinemo.com/s/images/xphinemo-logo-red.png.pagespeed.ic.-7PjMG-qEd.webp"
+		<span class="logo-lg"><img height="30px" src="http://runforiver.riveradoption.com/wp-content/uploads/2017/05/Logo-Phinemo-1.png"
 			 alt="Phinemo Logo"></span>
 	</a>
 
@@ -64,7 +64,7 @@
 								<a href="#" class="btn btn-default btn-flat">Profile</a>
 							</div>
 							<div class="pull-right">
-								<a href="<?php echo site_url('C_login/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
+								<a href="<?php echo site_url('login/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
 							</div>
 						</li>
 					</ul>
@@ -112,13 +112,13 @@
 						<i class="fa fa-angle-left pull-right"></i>
 					</span></a>
 				<ul class="treeview-menu">
-					<li><a href="<?php echo site_url('C_dashboard/index') ?>"><i class="fa fa-circle-o text-aqua"></i>Statistic</a></li>
+					<li><a href="<?php echo site_url('admin/index') ?>"><i class="fa fa-circle-o text-aqua"></i>Statistic</a></li>
 				</ul>
 			</li>
 			<!-- Chart data mahasiswa -->
 
 			<li>
-				<a href="<?php echo site_url('C_operator/index') ?>">
+				<a href="<?php echo site_url('operator') ?>">
 					<i class="fa fa-th"></i> <span>Tour Operator</span>
 					<span class="pull-right-container">
 						<!-- <small class="label pull-right bg-green">new</small> -->
@@ -126,7 +126,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="<?php echo site_url('C_product/index') ?>">
+				<a href="<?php echo site_url('product') ?>">
 					<i class="fa fa-th"></i> <span>Produk</span>
 					<span class="pull-right-container">
 						<!-- <small class="label pull-right bg-green">new</small> -->

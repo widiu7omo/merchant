@@ -9,7 +9,7 @@ class C_auth extends CI_Controller{
 		if($this->session->userdata('level') == 'free'){
 			
 		}
-		elseif($this->session->userdata('level') == "PRO"){
+		elseif($this->session->userdata('level') == "basic"){
 			
 		}
 	}
@@ -17,11 +17,7 @@ class C_auth extends CI_Controller{
 	public function index(){
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
 		// var_dump($result);
-		$this->load->view('admin/header');
-		$this->load->view('admin/navbar',$result);
-		$this->load->view('admin/v_dashboard');
-		$this->load->view('admin/bottombar');
-		$this->load->view('admin/footer');
+		redirect(site_url("admin/index"));
 		
 		
 	}

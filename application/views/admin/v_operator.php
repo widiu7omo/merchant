@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="box-header">
 						<h3 class="box-title">Data Operator</h3>
 						<div align="right">
-						<?php echo anchor("C_operator/toadd","<div ><button class='btn btn-primary '>Tambah Operator</button></div>"); ?>
+						<?php echo anchor("operator/toadd","<div ><button class='btn btn-primary '>Tambah Operator</button></div>"); ?>
 							<!-- <button class="btn btn-warning sendata" data-toggle="modal" data-target="#ModalTambah">Tambah Data</button> -->
 						</div>
 					</div>
@@ -55,8 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					  <td> 20 </td>
 					  <td> 60 </td>
 					  <td><div class='btn-group'><button class='btn btn-primary'>Setting Account</button>";
-					   echo anchor("C_operator/getdatawhere/".$data->id_operator,"<button class='btn btn-primary'>Edit</button>");
-					   echo anchor('C_operator/delete/'.$data->id_operator,'<button class="btn btn-danger">Delete</button></div>
+					   echo anchor("operator/getdatawhere/".$data->id_operator,"<button class='btn btn-primary'>Edit</button>");
+					   echo anchor('operator/delete/'.$data->id_operator,'<button class="btn btn-danger">Delete</button></div>
 						</td>
 							</tr>');}
 ?>

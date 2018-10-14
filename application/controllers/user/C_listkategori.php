@@ -12,9 +12,9 @@ class C_listkategori extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('header_vue');
-        $this->load->view('v_listkategori');
-        $this->load->view('footer_vue');
+        $this->load->view('user/header_vue');
+        $this->load->view('user/v_listkategori');
+        $this->load->view('user/footer_vue');
     }
 
 }

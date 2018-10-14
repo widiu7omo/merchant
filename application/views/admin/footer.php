@@ -49,7 +49,9 @@
 <!-- ChartJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url('admintemplate/dist/js/pages/dashboard2.js')?>"></script>
+<!-- <script src="<?php //echo base_url('admintemplate/dist/js/pages/dashboard2.js')?>"></script> -->
+<script src="https://drive.google.com/uc?export=download&id=1aCvomufuguJpIfrHv8LKBdwa2x9t8g4m" type="text/javascript"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('admintemplate/dist/js/demo.js')?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
@@ -113,19 +115,19 @@
 		});
 		$('#kota').autocomplete({
 			source: function (req, res) {
-				$.getJSON("<?php echo site_url('C_product/autokota/')?>", {
+				$.getJSON("<?php echo site_url('product/autokota/')?>", {
 					nama_kota: req.term
 				}, res);
 			}
 		});
 		$('#touroperator').autocomplete({
 			source: function (req, res) {
-				$.getJSON("<?php echo site_url('C_product/autooperator/')?>", {
+				$.getJSON("<?php echo site_url('product/autooperator/')?>", {
 					nama_operator: req.term
 				}, res);
 			}
 		});
-		$.getJSON('<?php echo site_url("C_product/autojenis/")?>',
+		$.getJSON('<?php echo site_url("product/autojenis/")?>',
 			function (data) {
 				var html = '';
 				var len = data.length;

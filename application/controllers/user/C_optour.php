@@ -6,13 +6,13 @@ class C_optour extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('M_optour','optour');
+		$this->load->model('user/M_optour','optour');
 	}
 
 	public function index()
 	{
 		$this->load->helper('url');
-		$this->load->view('v_optour');
+		$this->load->view('user/v_optour');
 	}
 
 	public function ajax_list()

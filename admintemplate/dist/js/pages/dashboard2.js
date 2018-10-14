@@ -15,7 +15,7 @@ $(function () {
   var salesChartCanvas = $('#salesChart').get(0).getContext('2d');
   console.log(salesChartCanvas);
   // This will get the first returned node in the jQuery collection.
-  var salesChart       = new Chart(salesChartCanvas);
+  // var salesChart       = new Chart(salesChartCanvas);
 
   var salesChartData = {
     labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -64,6 +64,8 @@ $(function () {
   };
 
   var salesChartOptions = {
+    type                    : 'line',
+    data                    : salesChartData,
     // Boolean - If we should show the scale at all
     showScale               : true,
     // Boolean - Whether grid lines are shown across the chart
@@ -102,9 +104,10 @@ $(function () {
     responsive              : true,
     multiTooltipTemplate    : "<%=datasetLabel%> : <%= value %>"
   };
+  var salesChart       = new Chart(salesChartCanvas,salesChartOptions);
 
   // Create the line chart
-  salesChart.Line(salesChartData, salesChartOptions);
+  // salesChart(salesChartData, salesChartOptions);
 
   // ---------------------------
   // - END MONTHLY SALES CHART -

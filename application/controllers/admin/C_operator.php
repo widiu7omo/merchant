@@ -7,11 +7,11 @@ class C_operator extends CI_Controller {
     public function __construct(){
         parent::__construct();
         if($this->session->userdata('status') != "login"){
-			redirect(site_url("C_login"));
+			redirect(site_url("login"));
 		}
         // redirect(site_url("C_auth"));
         $this->load->helper('url');
-        $this->load->model(array('M_operator','M_login'));
+        $this->load->model(array('admin/M_operator','admin/M_login'));
         $this->load->library('upload');
         
     }
@@ -33,7 +33,7 @@ class C_operator extends CI_Controller {
             'contact'=>$contact,
             'id_media'=>$pic);
         $this->M_operator->insert('operator',$data_operator);
-        redirect('C_operator/');
+        redirect('operator/');
     }
     public function getdatawhere($id){
         $where = array('id_operator' => $id);
@@ -46,12 +46,12 @@ class C_operator extends CI_Controller {
         }
         // var_dump($data['gambar']);
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_operator_edit',$data);
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_operator_edit',$data);
         $data['gambar'] = null;
-        $this->load->view('bottombar');
-        $this->load->view('footer',$data);
+        $this->load->view('admin/bottombar');
+        $this->load->view('admin/footer',$data);
     }
    public function update(){
         $id = $this->input->post('id');
@@ -77,12 +77,12 @@ class C_operator extends CI_Controller {
             'id_operator' => $id
         );
         $this->M_operator->update('operator',$data,$where);
-        redirect('C_operator/index');
+        redirect('operator');
     }
     public function delete($id){
         $where = array('id_operator'=> $id);
         $this->M_operator->delete('operator',$where);
-        redirect('C_operator/index');
+        redirect('operator');
     }
 
     // View
@@ -91,21 +91,21 @@ class C_operator extends CI_Controller {
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
 
         $data['gambar'] = [];
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_operator_tambah');
-        $this->load->view('bottombar');
-        $this->load->view('footer',$data);
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_operator_tambah');
+        $this->load->view('admin/bottombar');
+        $this->load->view('admin/footer',$data);
     }
     public function index()
     {   
 		$result['profil'] = $this->M_login->getDataProfile($this->session->userdata('id_user'));
         $data = $this->getdata();
-        $this->load->view('header');
-        $this->load->view('navbar',$result);
-        $this->load->view('v_operator',$data);
-        $this->load->view('bottombar');
-        $this->load->view('footer',$data);
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar',$result);
+        $this->load->view('admin/v_operator',$data);
+        $this->load->view('admin/bottombar');
+        $this->load->view('admin/footer',$data);
     }
     // another Function
     public function socialencode(){

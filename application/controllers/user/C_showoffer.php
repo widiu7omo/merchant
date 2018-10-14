@@ -7,7 +7,7 @@ class C_showoffer extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_showoffer');
+        $this->load->model('user/M_showoffer');
     }
     public function showDetail($key)
     {
@@ -27,10 +27,10 @@ class C_showoffer extends CI_Controller {
     
     public function index($key)
     {
-        $where = array('produk'=>$key);
-        $this->load->view('header_vue');
-        $this->load->view('v_showoffer',$where);
-        $this->load->view('footer_vue'); 
+        $where = array('user/produk'=>$key);
+        $this->load->view('user/header_vue');
+        $this->load->view('user/v_showoffer',$where);
+        $this->load->view('user/footer_vue'); 
     }
 
 }
