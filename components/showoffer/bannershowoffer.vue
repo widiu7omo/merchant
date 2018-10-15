@@ -8,9 +8,9 @@
                    
                 </div> -->
                  <div class="uk-position-large uk-position-bottom-left uk-margin-bottom" uk-lightbox>
-                    <a class="uk-button uk-button-primary uk-button-small" uk-icon="image" title="Lebih Banyak Gambar" :href="sub_base_url+'upload/images/'+sub_title.gambar" data-caption="Image"></a>
-                    <a class="" :href="sub_base_url+'upload/images/'+sub_title.gambar" data-caption="Image"></a>
-                    <a class="" :href="sub_base_url+'upload/images/'+sub_title.gambar" data-caption="Image"></a>
+                    <a class="uk-button uk-button-primary uk-button-small" uk-icon="image" title="Lebih Banyak Gambar" 
+                    :href="sub_base_url+'upload/images/'+sub_title.gambar" data-caption="Image"></a>
+                    <a v-for="( pic, index ) in pics" :key="index" v-if="index>0" class="" :href="sub_base_url+'upload/images/'+pic.gambar" data-caption="Image"></a>
                 </div>
                 
         </div>
@@ -21,6 +21,7 @@
 module.exports = {
     props:{
         sub_titles:Array,
+        pics:Array,
         sub_base_url:String
     },
     data:function(){

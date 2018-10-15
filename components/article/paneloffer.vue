@@ -32,7 +32,7 @@
                                 <div class="uk-card-header uk-padding-remove-right uk-padding-remove-left uk-margin-small-left">
                                     <div class="uk-grid-small uk-flex-middle uk-width-1-1" uk-grid>
                                         <div class="uk-width-1-3">
-                                            <img class="" :src="base+'admintemplate/dist_view/img/'+offer.resized" :style="thumbnail">
+                                            <img class="" :src="base+'upload/images/'+offer.resized" :style="thumbnail">
                                         </div>
                                         <div class="uk-width-expand">
                                             <!-- Title -->

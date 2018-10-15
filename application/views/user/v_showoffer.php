@@ -2,7 +2,7 @@
     <div id="app" class="uk-container-expand uk-width-1-1@m">
         <navbar></navbar>
         <div class="uk-container">
-        <bannershowoffer :sub_titles="main_titles" :sub_base_url="base_url"></bannershowoffer>
+        <bannershowoffer :sub_titles="main_titles" :sub_base_url="base_url" :pics="medias"></bannershowoffer>
         </div>
         
         
@@ -10,7 +10,7 @@
         
             <div class="uk-container uk-margin-small-top uk-width-1-2@m">
                     <labelshowoffer></labelshowoffer>
-                    <judulshowoffer :sub_titles="main_titles" :sub_base_url="base_url"></judulshowoffer>
+                    <judulshowoffer :sub_titles="main_titles" :sub_base_url="base_url" ></judulshowoffer>
             </div>
         
             <div class="uk-container uk-margin-small-top uk-width-1-2@m">
@@ -49,7 +49,8 @@
                 base_url:'http://localhost/proto/merchant/',
                 //main_url:'https://phinemo.com/merchant/index.php/',
                 //base_url:'https://phinemo.com/merchant/',
-                main_descs:[]            
+                main_descs:[],
+                medias:[]          
             },
             components: {
                 'navbar': httpVueLoader('<?php echo base_url("components/global/navbar.vue") ?>'),
@@ -68,7 +69,7 @@
                 tampil(){
                     axios
                         .get(this.main_url+'offer/showDetail/<?php echo $produk ?>')
-                        .then(response => (this.main_titles = response.data.title))
+                        .then(response => (this.main_titles = response.data.title,this.medias = response.data.media))
                 },
                 detail(){
                     axios
