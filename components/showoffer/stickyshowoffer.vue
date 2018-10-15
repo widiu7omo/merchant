@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div id="modal-mobile-call" uk-modal>
+        <div id="modal-mobile-call" uk-modal v-for="(number,index) in numbers" :key="index">
             <div class="uk-modal-dialog uk-margin-auto-vertical uk-border-rounded" style="height:auto;" >
                 <button class="uk-modal-close-outside uk-padding-small" type="button" uk-close></button>
                 <div class="uk-modal-header uk-border-rounded">
@@ -52,12 +52,12 @@
                 <div class="uk-modal-body uk-width-1-1">
                         <ul class="uk-list">
                             <li>
-                                <a class="uk-margin-small-right" :href="'https://wa.me/'+number">
+                                <a class="uk-margin-small-right" :href="'https://wa.me/'+number.con">
                                 <img :src="sub_base_url+'admintemplate/dist_view/img/wa.svg'" width="48" height="48" alt=""> WHATSAPP
                                 </a>
                             </li>
                             <li>
-                                <a :href="'tel:'+number">
+                                <a :href="'tel:'+number.con">
                                     <img :src="sub_base_url+'admintemplate/dist_view/img/phone.svg'" width="48" height="48" alt=""> PHONE
                                 </a>
                             </li>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <div id="modal-mobile-mail" uk-modal>
+        <div id="modal-mobile-mail" uk-modal v-for="(number,index) in numbers" :key="index">
             <div class="uk-modal-dialog  uk-margin-auto-vertical uk-border-rounded" style="height:auto;" >
                 <button class="uk-modal-close-outside uk-padding-small" type="button" uk-close></button>
                 <div class="uk-modal-header uk-border-rounded " >
@@ -75,12 +75,12 @@
                 <div class="uk-modal-body uk-width-1-1">
                         <ul class="uk-list">
                             <li>
-                                <a class="uk-margin-small-right" :href="'https://wa.me/'+number">
+                                <a class="uk-margin-small-right" :href="'https://wa.me/'+number.con">
                                 <img :src="sub_base_url+'admintemplate/dist_view/img/wa.svg'" width="48" height="48" alt=""> WHATSAPP
                                 </a>
                             </li>
                             <li>
-                                <a class="uk-margin-small-right" :href="'sms:'+number+'?body= Welcome Phinemo Merchant'"> 
+                                <a class="uk-margin-small-right" :href="'sms:'+number.con+'?body= Welcome Phinemo Merchant'"> 
                                     <img :src="sub_base_url+'admintemplate/dist_view/img/mail.svg'" width="48" height="48" alt=""> MAIL PHONE
                                 </a>
                             </li>
@@ -104,7 +104,6 @@
 				type: String,
 				require: true
             },
-            number:String,
 		},
         data: function () {
             return {

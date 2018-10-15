@@ -42,8 +42,7 @@
                                             <!-- Highlight -->
                                             <div class="uk-grid-small uk-flex-middle" uk-grid>
                                                 <div class="uk-width-auto">
-                                                    <a :href="url+offer.id_produk" class="uk-text-meta uk-text-small" :style="c_price"> From
-                                                        {{offer.harga}}K IDR</a><br>
+                                                    <a :href="url+offer.id_produk" class="uk-text-meta uk-text-small" :style="c_price">IDR {{ formatPrice(offer.harga) }}</a><br>
                                                     <!-- <i v-for="rating in card.rating" :key="rating" class="uk-text-center uk-margin-remove fa fa-star" -->
                                                         <!-- ></i> -->
                                                 </div>
@@ -93,6 +92,12 @@
                 nopaddinghr:{'padding-left':'0px','padding-right':'0px'},
             }
         },
+        methods: {
+                formatPrice(value) {
+                    let val = (value/1).toFixed(0).replace('.', ',')
+                    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+                }
+            }
         
     }
 </script>
