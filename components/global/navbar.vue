@@ -7,8 +7,9 @@
                 <nav class="uk-navbar-container uk-box-shadow-material-small" uk-navbar style="position: relative; z-index: 980;">
                     <div class="uk-navbar-left">
                         <div class="uk-visible@m uk-margin-medium-left">
+                            <a class="" href="http://localhost/proto/merchant/index.php/">
                             <img src="https://www.phinemo.com/wp-content/themes/projectav2/images/114x30xlogo-phinemo.png.pagespeed.ic.qkIeB28U-q.webp"
-                                alt="Logo Phinemo" height="" width="">
+                                alt="Logo Phinemo" height="" width=""></a>
                         </div>
                         <ul class="uk-navbar-nav">
                             <li class="uk-active  uk-hidden@m"><a href="" uk-toggle="target: #offcanvas-menu"><span uk-icon="menu"></span></a></li>
@@ -17,7 +18,7 @@
 
                         </ul>
                     </div>
-                    <a class="uk-navbar-center" href="index.html">
+                    <a class="uk-navbar-center" href="http://localhost/proto/merchant/index.php/">
                         <div class="uk-hidden@m">
                             <img src="https://www.phinemo.com/wp-content/themes/projectav2/images/114x30xlogo-phinemo.png.pagespeed.ic.qkIeB28U-q.webp"
                                 alt="Logo Phinemo" height="" width="">
@@ -34,27 +35,31 @@
             <div id="modal-search" class="uk-modal-full uk-animation-toggle" uk-modal>
                 <div class="uk-modal-dialog uk-panel">
                     <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-                    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle " uk-grid>
+                    <div class="uk-grid-collapse uk-child-width-1-1@s uk-flex-middle " uk-grid>
                         <div class="uk-padding uk-margin-top">
                             <form action="">
-                                <div class="uk-grid-small">
-                                    <div class="uk-form-controls uk-margin uk-width-1-2@s">
-                                        <select name="country" id="countryid" class="uk-select">
-                                            <option v-for="(country,index) in countries" :key="index" :value="country.value">{{country.name}}</option>
-                                        </select>
+                                <div class="">
+                                    <div class="uk-form-controls uk-margin uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
+                                        <div class="uk-width-1-2@s uk-width-1-5@m">
+                                            <select name="country" id="countryid" class="uk-select">
+                                                <option v-for="(country,index) in countries" :key="index" :value="country.value">{{country.name}}</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="uk-form-controls uk-margin uk-width-1-2@s">
-                                        <select name="category" id="categorytryid" class="uk-select">
-                                            <option v-for="(category,index) in categories" :key="index" :value="category.value">{{category.name}}</option>
-                                        </select>
+                                    <div class="uk-form-controls uk-margin  uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
+                                        <div class="uk-width-1-2@s uk-width-1-5@m">
+                                            <select name="category" id="categorytryid" class="uk-select">
+                                                <option v-for="(category,index) in categories" :key="index" :value="category.value">{{category.name}}</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
                             <form class="uk-search uk-search-navbar uk-animation-sl ide-right uk-width-1-1">
-                                <div class="uk-grid-small">
-                                    <div class="uk-inline uk-width-1-1">
+                                <div class="uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
+                                    <div class="uk-inline uk-width-1-2@s">
                                         <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-                                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus style="border: 1px solid #e5e5e5;">
                                     </div>
                                 </div>
                             </form>
@@ -153,11 +158,11 @@
                     },
                     {
                         name: 'articles',
-                        ref: 'article.html'
+                        ref: 'http://localhost/proto/merchant/index.php/article'
                     },
                     {
                         name: 'trips',
-                        ref: '#'
+                        ref: 'http://localhost/proto/merchant/index.php/homepage/index'
                     },
                     {
                         name: 'help',
