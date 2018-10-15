@@ -61,6 +61,9 @@ class C_article extends CI_Controller {
         $this->load->view('user/v_article');
         $this->load->view('user/footer_vue');
     }
+    public function router(){
+        $this->load->view('user/app');
+    }
 
 }
 
