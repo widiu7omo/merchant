@@ -7,7 +7,7 @@ class M_showoffer extends CI_Model {
     
     public function getProduct($key){
         $this->db->select(array('produk.id_produk','produk.nama_produk','produk.harga','produk.id_operator','json_unquote(json_extract(operator.contact, "$.number")) AS con',
-        'media.resized','media.gambar'));
+        'operator.nama_operator','media.resized','media.gambar'));
         $this->db->join('operator', 'produk.id_operator = operator.id_operator', 'left outer');
         $this->db->join('media', 'produk.id_thumb = media.id_media', 'left outer');
         $this->db->from('produk');

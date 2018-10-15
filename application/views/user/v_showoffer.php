@@ -1,7 +1,10 @@
 <body>
     <div id="app" class="uk-container-expand uk-width-1-1@m">
         <navbar></navbar>
+        <div class="uk-container">
         <bannershowoffer :sub_titles="main_titles" :sub_base_url="base_url"></bannershowoffer>
+        </div>
+        
         
         <div class="uk-width-1-1@s uk-width-1-1@m " >
         

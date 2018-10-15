@@ -11,35 +11,25 @@
             <a class="uk-button uk-button-danger uk-width-1-3 uk-button-small uk-border-rounded" href="https://phinemo.com/"><span uk-icon="world"></span><br>Website</a>
         </div>
 
-        <div id="modal-call" uk-modal>
-            <div class="uk-modal-dialog uk-margin-auto-vertical uk-border-rounded">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div id="modal-call" uk-modal v-for="(number,index) in numbers" :key="index">
+            <div class="uk-modal-dialog uk-margin-auto-vertical uk-border-rounded" style="height:auto;" >
+                <button class="uk-modal-close-outside uk-padding-small" type="button" uk-close></button>
                 <div class="uk-modal-header uk-border-rounded">
-                    <h2 class="uk-modal-title uk-text-center">Contact</h2>
+                    <h2 class="uk-modal-title uk-text-center">Contact Person</h2>
                 </div>
-                <div class="uk-modal-body uk-border-rounded ">
-                    <ul>
-                        <li class="uk-margin-small-bottom uk-text-bold">Email : <br>
-                                <a href="soegeng@phinemomedia.com">soegeng@phinemomedia.com</a><br>
-                                <a href="fahd@phinemo.com">fahd@phinemo.com</a>
-                        </li>
-                        <li class="uk-text-bold">Call Tour Operator : 
-                            <p class="uk-margin-remove-bottom">Soegeng
-                                <ul>
-                                    <li>Phone : 085950291823 </li>
-                                    <li>Whatsapp : 085950291823 </li>
-                                </ul>
-                            </p>
-                            <p class="uk-margin-remove-bottom uk">Fahd
-                                <ul>
-                                    <li>Phone : 081319321192</li>
-                                    <li>Whatsapp : 081319321192</li>
-                                </ul>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="uk-modal-body uk-width-1-1">
+                        <ul class="uk-list">
+                            <li>
+                                 <h4> {{number.nama_operator}} </h4>
+                            </li>
+                            <li>
+                                <img :src="sub_base_url+'admintemplate/dist_view/img/wa.svg'" width="48" height="48" alt=""> {{number.con}} 
+                            </li>
+                            <li>
+                                <img :src="sub_base_url+'admintemplate/dist_view/img/phone.svg'" width="48" height="48" alt=""> {{number.con}} 
+                            </li>
+                        </ul>
                 </div>
-                <div class="uk-modal-footer uk-text-right"></div>
             </div>
         </div>
 
