@@ -75,7 +75,10 @@ $route['product/(:any)/(:num)'] = 'admin/C_product/$1/$2';
 $route['article'] = 'user/C_article';
 $route['article/(:any)'] = 'user/C_article/$1';
 // Bussiness Page
-$route['bussiness/index'] = 'user/C_bisnispage';
+$route['bussiness'] = 'user/C_bisnispage';
+$route['bussiness/(:any)'] = 'user/C_bisnispage/$1';
+$route['bussiness/(:any)/(:num)'] = 'user/C_bisnispage/$1/$2';
+
 $route['homepage/index'] = 'user/C_homepage';
 $route['category'] = 'user/C_kategori';
 $route['listcategories'] = 'user/C_listkategori';

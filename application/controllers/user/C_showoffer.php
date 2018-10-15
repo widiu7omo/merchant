@@ -27,7 +27,7 @@ class C_showoffer extends CI_Controller {
     
     public function index($key)
     {
-        $where = array('user/produk'=>$key);
+        $where = array('produk'=>$key);
         $this->load->view('user/header_vue');
         $this->load->view('user/v_showoffer',$where);
         $this->load->view('user/footer_vue'); 

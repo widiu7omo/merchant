@@ -42,10 +42,10 @@
                 main_titles:[],
                 //main_url:'http://random.host:8888/magang/codeigniter/admin2/index.php/',
                 //base_url:'http://random.host:8888/magang/codeigniter/admin2/',
-                // main_url:'http://localhost/admin2/index.php/',
-                // base_url:'http://localhost/admin2/',
-                main_url:'http://phinemoo.com/merchant/index.php/',
-                base_url:'http://phinemoo.com/merchant/',
+                main_url:'http://localhost/proto/merchant/index.php/',
+                base_url:'http://localhost/proto/merchant/',
+                //main_url:'https://phinemo.com/merchant/index.php/',
+                //base_url:'https://phinemo.com/merchant/',
                 main_descs:[]            
             },
             components: {
