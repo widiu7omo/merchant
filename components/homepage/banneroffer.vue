@@ -10,7 +10,7 @@
           </div> -->
     <div>
         <div v-for="(url, index) in urls" :key="index" class="uk-inline uk-border-rounded uk-height-small 
-        uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-margin-bottom uk-width-1-1" :data-src="url.site" uk-img>
+        uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-margin-bottom uk-width-1-1" :data-src="sub_base_url+'admintemplate/dist_view/img/'+url.image" uk-img>
             <h1>{{url.name}}</h1>
             <a v-if="url.click == true " class="uk-button uk-button-default uk-text-small uk-text-bold uk-margin-small uk-margin-small-right uk-position-bottom-right" style="border: 0.15em solid #fff;" :href="url.url">{{url.link}}</a>
         </div>
@@ -28,30 +28,37 @@
 </template>
 <script>
     module.exports = {
+        props: {
+			sub_base_url: {
+				type: String,
+				require: true
+			},
+        },
         data: function () {
             return {
                 //url for 
                 urls: [{
-                    'site': 'img/Bintan.jpg',
-                    'name':'Bintan',
-                    'click':true,
-                    'link':'CLICK HERE',
-                    'url':'kategori.html'
+                    image   : 'Bintan.jpg',
+                    name    : 'Bintan',
+                    click   : true,
+                    link    : 'CLICK HERE',
+                    url     : 'kategori.html'
                 },
                 {
-                    'site': 'img/raja_ampat_banner.jpg',
-                    'name':'Raja Ampat',
-                    'click':false,
-                    'url':'kategori.html'
+                    image   : 'raja_ampat_banner.jpg',
+                    name    :'Raja Ampat',
+                    click   :false,
+                    url     :'kategori.html'
                 },
                 {
-                    'site': 'img/Derawan.jpg',
-                    'name':'Derawan',
-                    'click':false,
-                    'url':'kategori.html'
+                    image   : 'Derawan.jpg',
+                    name    :'Derawan',
+                    click   :false,
+                    url     :'kategori.html'
                 }
-            ]
+            ],
             }
+            
         },
     }
 </script>

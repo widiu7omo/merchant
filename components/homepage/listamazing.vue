@@ -4,7 +4,7 @@
             <li class="uk-margin-small-right uk-margin-small-bottom" v-for="(offer, index) in offers" :key="index">
                 <div class=" uk-card uk-card-default uk-box-shadow-material-small uk-border-rounded">
                     <div class="uk-card-media-top">
-                        <a :href="offer.url"><img class="uk-border-rounded uk-height-small uk-width-1-1" 
+                        <a :href="sub_main_url+offer.url"><img class="uk-border-rounded uk-height-small uk-width-1-1" 
                         :data-src="sub_base_url+'admintemplate/dist_view/img/'+offer.image" :alt="offer.title" uk-img></a>
                         <span class="uk-flex uk-position-bottom-right uk-label uk-margin-right" 
                         :style="s_label">{{offer.label}} </span>
@@ -28,6 +28,10 @@
 			sub_base_url: {
 				type: String,
 				require: true
+            },
+            sub_main_url: {
+				type: String,
+				require: true
 			},
         },
         data: function () {
@@ -38,7 +42,7 @@
                         price: '600',
                         ratings: 3,
                         label: 'Top Rated',
-                        url: 'showoffer.html'
+                        url: 'C_showoffer/index/99'
                     },
                     {
                         title: 'Ubud Cycling Tour',
@@ -46,7 +50,7 @@
                         price: '700',
                         ratings: 1,
                         label: 'Best Seller',
-                        url: 'showoffer_bk.html'
+                        url: 'C_showoffer/index/99'
                     },
                     {
                         title: 'Gili Meno Fun Dive Trip',
@@ -54,7 +58,7 @@
                         price: '800',
                         ratings: 5,
                         label: 'Spesial Offer',
-                        url: 'showoffer.html'
+                        url: 'C_showoffer/index/99'
                     },
                     {
                         title: 'Dieng Plateau Golden Sunrise',
@@ -62,7 +66,7 @@
                         price: '350',
                         ratings: 1,
                         label: 'Popular',
-                        url: 'showoffer_bk.html'
+                        url: 'C_showoffer/index/99'
                     },
                     {
                         title: 'Lava Tour Yogyakarta',
@@ -70,7 +74,7 @@
                         price: '1000',
                         ratings: 4,
                         label: 'Popular',
-                        url: 'showoffer.html'
+                        url: 'C_showoffer/index/99'
                     },
                     {
                         title: 'Ubud Cycling Tour',
@@ -78,7 +82,7 @@
                         price: '700',
                         ratings: 1,
                         label: 'Best Seller',
-                        url: 'showoffer_bk.html'
+                        url: 'C_showoffer/index/99'
                     },
 
                 ],

@@ -4,7 +4,7 @@
                 <li class="uk-margin-small-right" v-for="(slider, index) in sliders" :key="index">
                     <div class="uk-margin-small"><a :href="slider.url"
                     ><img class="uk-box-shadow-small uk-box-shadow-material-small uk-border-rounded uk-height-small uk-width-1-1" 
-                    :data-src="slider.image" :alt="slider.title" uk-img></a>
+                    :data-src="sub_base_url+'admintemplate/dist_view/img/'+slider.image" :alt="slider.title" uk-img></a>
                      </div>
                     <div class="uk-position-center uk-panel">
                         <h3>{{slider.title}}</h3>
@@ -22,16 +22,22 @@
 </template>
 <script>
 module.exports = {
+    props: {
+			sub_base_url: {
+				type: String,
+				require: true
+			},
+        },
     data:function(){
         return{
             sliders:[
-                {title:'Magelang',image:'img/rafting_magelang.jpg',url:'kategori.html',},
-                {title:'Tanjung Puting',image:'img/tanjung.jpg',url:'kategori.html'},
-                {title:'Labuan Bajo',image:'img/tanjung_benoa.jpg',url:'kategori.html'},
-                {title:'Bali',image:'img/tari_kecak.jpg',url:'kategori.html'},
-                {title:'Tanjung Puting',image:'img/tanjung.jpg',url:'kategori.html'},
-                {title:'Labuan Bajo',image:'img/tanjung_benoa.jpg',url:'kategori.html'},
-                {title:'Bali',image:'img/tari_kecak.jpg',url:'kategori.html'},
+                {title:'Magelang',image:'rafting_magelang.jpg',url:'kategori.html',},
+                {title:'Tanjung Puting',image:'tanjung.jpg',url:'kategori.html'},
+                {title:'Labuan Bajo',image:'tanjung_benoa.jpg',url:'kategori.html'},
+                {title:'Bali',image:'tari_kecak.jpg',url:'kategori.html'},
+                {title:'Tanjung Puting',image:'tanjung.jpg',url:'kategori.html'},
+                {title:'Labuan Bajo',image:'tanjung_benoa.jpg',url:'kategori.html'},
+                {title:'Bali',image:'tari_kecak.jpg',url:'kategori.html'},
             ]
         }
     }

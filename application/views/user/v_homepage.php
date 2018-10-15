@@ -1,31 +1,40 @@
 <body>
     <div id="app" class="uk-container-expand">
         <navbar></navbar>
-        <slideshow></slideshow>
+        <div>
+        <slideshow :sub_base_url="base_url"></slideshow>
+        </div>
+        
         <div class="uk-container uk-padding-small uk-padding-remove-right">
             <h4 class="uk-text-bold uk-heading-line"><span>Paket Populer</span></h4>
-            <listamazing></listamazing>  
+            <listamazing :sub_base_url="base_url" :sub_main_url="main_url"></listamazing>  
         </div>
         
         <div class="uk-container uk-padding-small uk-padding-remove-right uk-padding-remove-top">
             <h4 class="uk-text-bold uk-heading-line"><span>Penawaran Spesial</span></h4>
         </div>
         <div class="uk-container uk-padding-small uk-padding-remove-bottom uk-padding-remove-top">
-                <banner></banner>
+                <banner :sub_base_url="base_url" :sub_main_url="main_url"></banner>
         </div>
         
         <div class="uk-container uk-padding-small uk-padding-remove-right uk-padding-remove-top">
                 <h4 class="uk-text-bold uk-heading-line"><span>Destinasi Populer</span></h4>
-                <slider></slider>  
+                <slider :sub_base_url="base_url" :sub_main_url="main_url"></slider>  
         </div>
     </div>
     <!-- End of App Vue -->
 
     <script type="text/javascript">
-        new Vue({
+      var v =  new Vue({
             el: '#app',
             data: {
                 show: false,
+                //main_url:'http://random.host:8888/magang/codeigniter/admin2/index.php/',
+                //base_url:'http://random.host:8888/magang/codeigniter/admin2/',
+                main_url:'http://localhost/proto/merchant/index.php/',
+                base_url:'http://localhost/proto/merchant/',
+                //main_url:'https://phinemo.com/merchant/index.php/',
+                //base_url:'https://phinemo.com/merchant/',
             },
             components: {
                 'navbar': httpVueLoader('<?php echo base_url("components/global/navbar.vue") ?>'),
