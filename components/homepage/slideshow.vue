@@ -1,9 +1,10 @@
 <template>
     <div uk-slideshow="animation: push; autoplay: true; ratio: 16:8;" autoplay-interval="3000">
-            <div class="uk-position-relative uk-visible-toggle uk-light">
-                <ul class="uk-slideshow-items">
-                    <li v-for="(cover,index) in covers" :key="index" class="uk-transition-toggle">
-                        <img :src="sub_base_url+'admintemplate/dist_view/img/'+cover.url" alt="" uk-cover>
+            <div class="uk-visible-toggle uk-light">
+                <ul class="uk-slideshow-items uk-width-1-1">
+                    <li v-for="(cover,index) in covers" :key="index" class="uk-transition-toggle uk-height-1-1">
+                        <img class="uk-border-rounded uk-width-1-1 uk-height-1-1"
+                        :data-src="sub_base_url+'admintemplate/dist_view/img/'+cover.url" alt="" uk-img>
                         <!-- <div class="uk-hidden-hover uk-transition-slide-bottom uk-overlay uk-padding-small uk-overlay-primary uk-position-bottom uk-text-center">
                         <h3 class="uk-margin-remove">Overlay Bottom</h3>
                         <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -16,8 +17,6 @@
                     uk-slideshow-item="next"></a>
             <ul class="uk-position-bottom uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
             </div>
-            
-
         </div>
 </template>
 <script>
@@ -31,10 +30,11 @@ module.exports = {
     data: function(){
         return{
             covers:[
-                {url:'Bali.jpg'},
-                {url:'Jogja.jpg'},
-                {url:'Lombok.jpg'},
-                {url:'Raja_ampat.jpg'}
+                {url:'bannerhome1.jpg'},
+                {url:'bannerhome2.jpg'},
+                {url:'bannerhome3.jpg'},
+                {url:'bannerhome4.jpg'},
+                {url:'bannerhome5.jpg'},
             ],
         }
     }

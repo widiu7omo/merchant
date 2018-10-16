@@ -7,8 +7,10 @@
                 <fillarticle></fillarticle>
                 <paneloffer :offers="offs" :base="baseUrl" :url="mainUrl"></paneloffer>
                 <div class="uk-padding-large uk-padding-remove-bottom" >
-                <recommended></recommended>
-                <popular></popular>
+                <h5 class="uk-text-bold uk-heading-line uk-margin-remove-top"><span>REKOMENDASI</span></h5>
+                <recommended :sub_base_url="baseUrl" :sub_main_url="mainUrl"></recommended>
+                <h5 class="uk-text-bold uk-heading-line uk-margin-remove-top"><span>TRENDING</span></h5>
+                <popular :sub_base_url="baseUrl" :sub_main_url="mainUrl"></popular>
                 </div>
         </div>
     </div>
