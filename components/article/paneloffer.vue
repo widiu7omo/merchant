@@ -36,13 +36,13 @@
                                         </div>
                                         <div class="uk-width-expand">
                                             <!-- Title -->
-                                            <a :href="url+'offer/index/'+offer.id_produk">
+                                            <a :href="url+'offer/index/'+offer.id_produk" target="_blank">
                                                 <h6 class=" uk-margin-remove-bottom uk-text-small uk-text-bold">{{offer.nama_produk}}</h6>
                                             </a>
                                             <!-- Highlight -->
                                             <div class="uk-grid-small uk-flex-middle" uk-grid>
                                                 <div class="uk-width-auto">
-                                                    <a :href="url+offer.id_produk" class="uk-text-meta uk-text-small" :style="c_price">IDR {{ formatPrice(offer.harga) }}</a><br>
+                                                    <a :href="url+'offer/index/'+offer.id_produk" target="_blank" class="uk-text-meta uk-text-small" :style="c_price">IDR {{ formatPrice(offer.harga) }}</a><br>
                                                     <!-- <i v-for="rating in card.rating" :key="rating" class="uk-text-center uk-margin-remove fa fa-star" -->
                                                         <!-- ></i> -->
                                                 </div>

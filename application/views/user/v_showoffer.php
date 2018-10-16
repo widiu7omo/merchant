@@ -16,7 +16,7 @@
             <div class="uk-container uk-margin-small-top uk-width-1-2@m">
                     
                 <div class="uk-margin-small-top uk-margin-small-top uk-margin-small-top">
-                    <h6 class="uk-text-bold uk-text uk-margin-remove-bottom">DESKRIPSI SINGKAT</h6>
+                    <h5 class="uk-text-bold uk-text uk-margin-remove-bottom">DESKRIPSI SINGKAT</h5>
                 </div>
                 <hr class="uk-margin-small-top uk-margin-small-bottom">
                 <isiinformasi :sub_descs="main_descs" :deskripsi="main_descs.deskripsi"></isiinformasi>

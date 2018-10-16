@@ -2,8 +2,8 @@
 
 	<div class="">
 		<div v-for="(sub_title, index) in sub_titles" :key="index">
-			<h1 class="uk-text-bold uk-text-lead uk-margin-remove-bottom">{{sub_title.nama_produk}}</h1>
-			<h5 class="uk-text-medium  uk-margin-remove-bottom uk-margin-remove-top" style="color:orange;">IDR {{ formatPrice(sub_title.harga) }}</h5>
+			<h1 class="uk-text-bold uk-text-lead uk-margin-remove-bottom" style="font-size:2.1rem;">{{sub_title.nama_produk}}</h1>
+			<h4 class="uk-text-medium  uk-margin-remove-bottom uk-margin-remove-top" style="color:orange;">IDR {{ formatPrice(sub_title.harga) }}</h4>
 			<!-- <i v-for="rating in detail.ratings" :key="rating" class="fa fa-star" aria-hidden="true"></i> -->
 		</div>
 	</div>

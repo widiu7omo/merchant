@@ -3,25 +3,28 @@
         <ul uk-accordion class="uk-text-small">
             <li class="uk-open">
                 <hr class="uk-margin-small-top uk-margin-small-bottom">
-                <a class="uk-accordion-title uk-text-bold" :style="s_font" href="#"> HIGHLIGHT</a>
-                <div class="uk-accordion-content" v-html="highlight">
+                <a class="uk-accordion-title " href="#">
+                    <h5 class="uk-text-bold">HIGHLIGHT</h5> 
+                </a>
+                <div class="uk-accordion-content" style="font-size:16px;" v-html="highlight">
                     
                 </div>
             </li>
-            <li>
+            <li class="uk-open">
                 <hr class="uk-margin-small-top uk-margin-small-bottom">
-                <a class="uk-accordion-title uk-text-bold" :style="s_font" href="#">FASILITAS</a>
-                <div class="uk-accordion-content" v-html="fasilitas">
-                    <h6>TERMASUK</h6>
-                    
-                    <h6>TIDAK TERMASUK</h6>
+                <a class="uk-accordion-title " href="#">
+                   <h5 class="uk-text-bold"> FASILITAS</h5>
+                </a>
+                <div class="uk-accordion-content" style="font-size:16px;" v-html="fasilitas">
                     
                 </div>
             </li>
-            <li>
+            <li class="uk-open">
                 <hr class="uk-margin-small-top uk-margin-small-bottom">
-                <a class="uk-accordion-title uk-text-bold" :style="s_font" href="#">KEBIJAKAN PEMBATALAN</a>
-                <div class="uk-accordion-content" v-html="kebijakan">
+                <a class="uk-accordion-title " href="#">
+                   <h5 class="uk-text-bold">KEBIJAKAN PEMBATALAN</h5>
+                </a>
+                <div class="uk-accordion-content" style="font-size:16px;" v-html="kebijakan">
                     
                 </div>
             </li>           

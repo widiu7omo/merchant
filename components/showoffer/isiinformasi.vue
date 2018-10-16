@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-margin-small-bottom uk-margin-small-bottom uk-margin-small-bottom uk-text-small" v-html="deskripsi"> 
+  <div class="uk-margin-small-bottom uk-margin-small-bottom uk-margin-small-bottom uk-text-small" style="font-size:16px;" v-html="deskripsi"> 
         <!-- {{sub_desc.deskripsi}} -->
         <ul class="uk-list uk-list-bullet uk-margin-small-bottom uk-margin-remove-top">
             <!-- <li>Durasi Tour: 8 Jam</li> -->
