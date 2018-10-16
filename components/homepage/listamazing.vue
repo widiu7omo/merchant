@@ -11,7 +11,7 @@
                     </div>
                     <div class="uk-card-body uk-padding-small" style="height:100px;">
                         <h5 class="uk-margin-remove-bottom uk-text-bold">
-                            <a style="color:black;" :href="offer.url">{{offer.title}}</a></h5>
+                            <a style="color:black;" :href="sub_main_url+offer.url">{{offer.title}}</a></h5>
                         <p class="uk-text-small uk-margin-small-bottom uk-margin-remove-top" style="color: orange;">From IDR {{offer.price}}K</p>
                         <i v-for="rating in offer.ratings" :key="rating" class="fa fa-star" aria-hidden="true" ></i>
                     </div>
