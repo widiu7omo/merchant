@@ -1,11 +1,11 @@
 <body>
     <div id="app" class="uk-container-expand uk-width-1-1@m">
         <navbar></navbar>
-        <div class="uk-container">
-        <bannershowoffer :sub_titles="main_titles" :sub_base_url="base_url" :pics="medias"></bannershowoffer>
+        <div class="uk-container uk-width-1-1@m uk-width-1-1@s uk-margin-remove-left uk-margin-remove-right">
+            <div class="uk-container uk-width-3-4@m">
+            <bannershowoffer :sub_titles="main_titles" :sub_base_url="base_url" :pics="medias"></bannershowoffer>
+            </div>
         </div>
-        
-        
         <div class="uk-width-1-1@s uk-width-1-1@m " >
         
             <div class="uk-container uk-margin-small-top uk-width-1-2@m">

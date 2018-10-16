@@ -7,10 +7,10 @@
                 <fillarticle></fillarticle>
                 <paneloffer :offers="offs" :base="baseUrl" :url="mainUrl"></paneloffer>
                 <div class="uk-padding-large uk-padding-remove-bottom" >
-                <h5 class="uk-text-bold uk-heading-line uk-margin-remove-top"><span>REKOMENDASI</span></h5>
                 <recommended :sub_base_url="baseUrl" :sub_main_url="mainUrl"></recommended>
-                <h5 class="uk-text-bold uk-heading-line uk-margin-remove-top"><span>TRENDING</span></h5>
                 <popular :sub_base_url="baseUrl" :sub_main_url="mainUrl"></popular>
+                <h4 class="uk-text-bold uk-margin-remove-top"><span>Paket Populer</span></h4>
+                <listamazing :sub_base_url="baseUrl" :sub_main_url="mainUrl"></listamazing> 
                 </div>
         </div>
     </div>
@@ -74,7 +74,8 @@
                 'fillarticle': httpVueLoader('<?php echo base_url("components/article/fillarticle.vue") ?>'),
                 'paneloffer': httpVueLoader('<?php echo base_url("components/article/paneloffer.vue") ?>'),
                 'recommended':httpVueLoader('<?php echo base_url("components/article/recommended.vue") ?>'),
-                'popular':httpVueLoader('<?php echo base_url("components/article/popular.vue") ?>')
+                'popular':httpVueLoader('<?php echo base_url("components/article/popular.vue") ?>'),
+                'listamazing': httpVueLoader('<?php echo base_url("components/homepage/listamazing.vue") ?>')
             }
             ,
             created(){
