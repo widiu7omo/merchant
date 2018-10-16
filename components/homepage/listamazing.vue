@@ -42,7 +42,7 @@
                         price: '600',
                         ratings: 3,
                         label: 'Top Rated',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
                     {
                         title: 'Ubud Cycling Tour',
@@ -50,7 +50,7 @@
                         price: '700',
                         ratings: 1,
                         label: 'Best Seller',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
                     {
                         title: 'Gili Meno Fun Dive Trip',
@@ -58,7 +58,7 @@
                         price: '800',
                         ratings: 5,
                         label: 'Spesial Offer',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
                     {
                         title: 'Dieng Plateau Golden Sunrise',
@@ -66,7 +66,7 @@
                         price: '350',
                         ratings: 1,
                         label: 'Popular',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
                     {
                         title: 'Lava Tour Yogyakarta',
@@ -74,7 +74,7 @@
                         price: '1000',
                         ratings: 4,
                         label: 'Popular',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
                     {
                         title: 'Ubud Cycling Tour',
@@ -82,7 +82,7 @@
                         price: '700',
                         ratings: 1,
                         label: 'Best Seller',
-                        url: 'C_showoffer/index/99'
+                        url: 'offer/index/121'
                     },
 
                 ],
