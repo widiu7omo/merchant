@@ -50,7 +50,8 @@
                 //main_url:'https://phinemo.com/merchant/index.php/',
                 //base_url:'https://phinemo.com/merchant/',
                 main_descs:[],
-                medias:[]          
+                medias:[],
+                          
             },
             components: {
                 'navbar': httpVueLoader('<?php echo base_url("components/global/navbar.vue") ?>'),

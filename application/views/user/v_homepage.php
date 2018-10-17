@@ -41,6 +41,7 @@
                 base_url:'http://localhost/proto/merchant/',
                 //main_url:'https://phinemo.com/merchant/index.php/',
                 //base_url:'https://phinemo.com/merchant/',
+               
             },
             components: {
                 'navbar': httpVueLoader('<?php echo base_url("components/global/navbar.vue") ?>'),

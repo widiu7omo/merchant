@@ -3,7 +3,7 @@
         <div class="uk-grid ">
             <div class="uk-width-1-1 uk-padding-remove-left">
                 <article class="uk-article uk-padding-large uk-padding-remove-bottom" style="margin-left:30px;">
-                    <h1 class="uk-article-title" style="font-size: 3.2rem;">
+                    <h1 class="uk-article-title" style="font-size: 3.0rem;">
                         4 Desa Wisata Bali yang Asyik Anda Datangi Akhir Pekan Ini
                     </h1>
                     <h4 class="">Paduan suasana alam hingga kultur masyarakat setempat merupakan paket 
@@ -17,7 +17,7 @@
                                 <cite>desa wisata penglipuran di bali (Foto/baliberkarya)</cite>
                             </p>
 
-                    <div class="uk-width-2-3" style="margin:0 auto;">
+                    <div class="uk-width-2-3@m" style="margin:0 auto;">
                         <p class="uk-text-justify"> 
                         Desa Wisata Bali selalu memiliki pesona tersendiri bagi para wisatawan yang berkunjung ke Pulau Dewata, Bali. 
                         Paduan suasana alam hingga kultur masyarakat setempat merupakan paket lengkap yang patut 
