@@ -6,7 +6,7 @@
                     <div class="uk-card-media-top">
                         <a :href="sub_main_url+offer.url"><img class="uk-border-rounded uk-height-small uk-width-1-1" 
                         :data-src="sub_base_url+'admintemplate/dist_view/img/'+offer.image" :alt="offer.title" uk-img></a>
-                        <span class="uk-flex uk-position-bottom-right uk-label uk-margin-right" 
+                        <span class="uk-flex uk-position-bottom-right uk-label" 
                         :style="s_label">{{offer.label}} </span>
                     </div>
                     <div class="uk-card-body uk-padding-small" style="height:100px;">

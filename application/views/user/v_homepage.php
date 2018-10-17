@@ -5,21 +5,27 @@
         <slideshow :sub_base_url="base_url"></slideshow>
         </div>
         
-        <div class="uk-container uk-padding-small uk-padding-remove-right">
-            <h4 class="uk-text-bold uk-heading-line"><span>Paket Populer</span></h4>
-            <listamazing :sub_base_url="base_url" :sub_main_url="main_url"></listamazing>  
+        <div class="uk-container ">
+            <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom uk-margin-small-top">
+                <h4 class="uk-text-bold uk-heading-line"><span>Paket Populer</span></h4>
+                <listamazing :sub_base_url="base_url" :sub_main_url="main_url"></listamazing> 
+            </div>
+             
         </div>
         
-        <div class="uk-container uk-padding-small uk-padding-remove-right uk-padding-remove-top">
-            <h4 class="uk-text-bold uk-heading-line"><span>Penawaran Spesial</span></h4>
-        </div>
-        <div class="uk-container uk-padding-small uk-padding-remove-bottom uk-padding-remove-top">
+        <div class="uk-container ">
+            <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom uk-margin-small-top">
+                <h4 class="uk-text-bold uk-heading-line"><span>Penawaran Spesial</span></h4>
                 <banner :sub_base_url="base_url" :sub_main_url="main_url"></banner>
+            </div>
         </div>
         
-        <div class="uk-container uk-padding-small uk-padding-remove-right uk-padding-remove-top">
+        <div class="uk-container ">
+            <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom uk-margin-small-top">
                 <h4 class="uk-text-bold uk-heading-line"><span>Destinasi Populer</span></h4>
-                <slider :sub_base_url="base_url" :sub_main_url="main_url"></slider>  
+                <slider :sub_base_url="base_url" :sub_main_url="main_url"></slider> 
+            </div>
+                 
         </div>
     </div>
     <!-- End of App Vue -->

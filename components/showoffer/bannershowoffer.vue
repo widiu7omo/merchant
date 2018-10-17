@@ -2,9 +2,13 @@
   <div>
         <div class="uk-panel uk-width-1-1" v-for="(sub_title,index) in sub_titles" :key="index">
                 
-                <div class="uk-background-cover uk-background-muted uk-height-large uk-width-1-1@m uk-flex uk-flex-center uk-flex-middle"
-                 style="background-image: url(https://phinemo.com/wp-content/uploads/2018/10/40612443_269868606981418_715767568131743349_n.jpg);">
-                    
+                <div class="uk-background-cover uk-background-muted uk-height-large uk-width-1-1@m uk-flex uk-flex-center uk-flex-middle uk-hidden@m"
+                 style="background-image: url(https://phinemo.com/wp-content/uploads/2018/10/40612443_269868606981418_715767568131743349_n.jpg); height:300px;">
+                </div>
+
+                <div class="uk-width-1-1@s uk-background-cover uk-background-muted uk-height-large uk-visible@m"  
+                style="background-image: url(https://phinemo.com/wp-content/uploads/2018/10/40612443_269868606981418_715767568131743349_n.jpg);" >
+ 
                 </div>
                                 
                     <!-- <div class="">

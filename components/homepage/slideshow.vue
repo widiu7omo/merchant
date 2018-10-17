@@ -1,5 +1,5 @@
 <template>
-    <div uk-slideshow="animation: push; autoplay: true; ratio: 16:8;" autoplay-interval="3000">
+    <div uk-slideshow="animation: push; autoplay: true; ratio: 7:1.7;" autoplay-interval="3000">
             <div class="uk-visible-toggle uk-light">
                 <ul class="uk-slideshow-items uk-width-1-1">
                     <li v-for="(cover,index) in covers" :key="index" class="uk-transition-toggle uk-height-1-1">
@@ -9,13 +9,15 @@
                         <h3 class="uk-margin-remove">Overlay Bottom</h3>
                         <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div> -->
+                        <ul class="uk-position-bottom uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                            <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous
+                                uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                                uk-slideshow-item="next"></a>
                     </li>
                 </ul>
-                <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous
-                    uk-slideshow-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                    uk-slideshow-item="next"></a>
-            <ul class="uk-position-bottom uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                
+            
             </div>
         </div>
 </template>
