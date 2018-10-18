@@ -37,24 +37,6 @@
                     <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
                     <div class="uk-grid-collapse uk-child-width-1-1@s uk-flex-middle " uk-grid>
                         <div class="uk-padding uk-margin-top">
-                            <form action="">
-                                <div class="">
-                                    <div class="uk-form-controls uk-margin uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
-                                        <div class="uk-width-1-2@s uk-width-1-5@m">
-                                            <select name="country" id="countryid" class="uk-select">
-                                                <option v-for="(country,index) in countries" :key="index" :value="country.value">{{country.name}}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="uk-form-controls uk-margin  uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
-                                        <div class="uk-width-1-2@s uk-width-1-5@m">
-                                            <select name="category" id="categorytryid" class="uk-select">
-                                                <option v-for="(category,index) in categories" :key="index" :value="category.value">{{category.name}}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
                             <form class="uk-search uk-search-navbar uk-animation-sl ide-right uk-width-1-1">
                                 <div class="uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
                                     <div class="uk-inline uk-width-1-2@s">
@@ -63,6 +45,18 @@
                                     </div>
                                 </div>
                             </form>
+                            <form action="">
+                                <div class="">
+                                    <div class="uk-form-controls uk-margin uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
+                                        <div class="uk-width-1-2@s uk-width-1-5@m uk-margin-top">
+                                            <select name="country" id="countryid" class="uk-select">
+                                                <option v-for="(country,index) in countries" :key="index" :value="country.value">{{country.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+            
                         </div>
                         <div class="uk-padding-large">
                         </div>
