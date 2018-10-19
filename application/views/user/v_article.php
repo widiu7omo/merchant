@@ -13,6 +13,10 @@
                 <listamazing :sub_base_url="baseUrl" :sub_main_url="mainUrl"></listamazing> 
                 </div>
         </div>
+                <!-- <div class="uk-container uk-padding-small uk-padding-remove-right">
+                <h4 class="uk-text-bold uk-margin-remove-top"><span>Paket Populer</span></h4>
+                <listamazing :sub_base_url="baseUrl" :sub_main_url="mainUrl"></listamazing> 
+                </div> -->
     </div>
     <!-- Content Fill -->
 

@@ -33,30 +33,92 @@
             </div>
             <!-- Modal -->
             <div id="modal-search" class="uk-modal-full uk-animation-toggle" uk-modal>
-                <div class="uk-modal-dialog uk-panel">
+                <div class="uk-modal-dialog uk-panel uk-width-1-3">
                     <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-                    <div class="uk-grid-collapse uk-child-width-1-1@s uk-flex-middle " uk-grid>
+                    <div class="uk-grid-collapse uk-child-width-1-1@s uk-flex-middle"  style="background:white;" uk-grid>
+
                         <div class="uk-padding uk-margin-top">
-                            <form class="uk-search uk-search-navbar uk-animation-sl ide-right uk-width-1-1">
+
+                            <div class="uk-text-center uk-margin-small-bottom">
+                                <img src="https://www.phinemo.com/wp-content/themes/projectav2/images/114x30xlogo-phinemo.png.pagespeed.ic.qkIeB28U-q.webp"
+                                    alt="Logo Phinemo" height="" width="">
+                            </div>
+
+                            <form class="uk-search uk-search-navbar uk-animation-sl ide-right uk-width-1-1 uk-margin-small-bottom">
                                 <div class="uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
-                                    <div class="uk-inline uk-width-1-2@s">
-                                        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-                                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus style="border: 1px solid #e5e5e5;">
+                                    <div class="uk-inline uk-width-1-2@m">
+                                        <a href="http://localhost/proto/merchant/index.php/listcategories" class="uk-search-icon-flip uk-padding-small" uk-search-icon></a>
+                                        <input class="uk-search-input uk-padding-small" type="search" placeholder="Search..." autofocus style="border: 1px solid #e5e5e5; border-radius: 30px 30px 30px 30px;">
                                     </div>
                                 </div>
                             </form>
-                            <form action="">
+                            <!-- <form action="">
                                 <div class="">
                                     <div class="uk-form-controls uk-margin uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
                                         <div class="uk-width-1-2@s uk-width-1-5@m uk-margin-top">
-                                            <select name="country" id="countryid" class="uk-select">
-                                                <option v-for="(country,index) in countries" :key="index" :value="country.value">{{country.name}}</option>
+                                            <select name="category" id="categoryid" class="uk-select">
+                                                <option v-for="(category,index) in categories" :key="index" :value="category.value">{{category.name}}</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
+                            </form> -->
+                            <div class="uk-flex uk-flex-right uk-padding-small uk-width-1-2@m">
+                                <button href="#toggle-animation" class="uk-button uk-button-primary uk-width-1-2@m uk-border-rounded" type="button" uk-toggle="target: #toggle-animation; animation: uk-animation-fade">Filter</button>
+                            </div>
+                            
+                            <div id="toggle-animation" aria-hidden="true" hidden>
+
+                                <form class="uk-flex uk-flex-center uk-padding-small">
+                                <fieldset class="uk-fieldset uk-width-1-2@m">
+
+                                    <legend class="uk-legend">Filter Category</legend>
+
+                                    <div class="uk-margin">
+                                        <div class="uk-inline">
+                                            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: calendar"></span>
+                                            <label> Start </label>  <input type="date" name="tanggal_mulai">
+                                        </div>
+                                        
+                                        <div class="uk-inline">
+                                            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: calendar"></span>
+                                            <label> End </label> <input type="date" name="tanggal_akhir">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="uk-margin uk-width-1-2">
+                                        <select name="kota" class="uk-select">
+                                            <option v-for="(country,index) in countrys" :key="index" :value="country.value">{{country.name}}</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                        <label v-for="(jenis,index) in jeniss" :key="index" :value="jenis.value">
+                                            <input class="uk-checkbox" type="checkbox" name="jenis" checked> {{jenis.name}} </label>
+                                    </div>
+
+                                    
+                                    <div class="wrapper" style="padding:20px;">
+                                            <div class="range-slider">
+                                                <input type="text" class="js-range-slider" value="" />
+                                            </div>
+                                            <hr>
+                                            <div class="extra-controls form-inline">
+                                            <div class="form-group">
+                                                <input type="text" class="js-input-from form-control" value="0" />
+                                                <input type="text" class="js-input-to form-control" value="0" />
+                                            </div>
+                                            </div>
+                                    </div>
+                                    
+
+                                </fieldset>
                             </form>
-            
+
+                            </div>
+
+                           
                         </div>
                         <div class="uk-padding-large">
                         </div>
@@ -116,34 +178,64 @@
                 show: false,
                 showsearch: false,
                 hidden: false,
-                countries: [{
-                        name: 'Indonesia',
-                        value: 'indonesia'
+                countrys: [{
+                        name: 'Please Select Country',
+                        value: ''
                     },
                     {
-                        name: 'Myanmar',
-                        value: 'myanmar'
+                        name: 'Semarang',
+                        value: 'Semarang'
+                    },
+                    
+                    {
+                        name: 'Yogyakarta',
+                        value: 'Yogyakarta'
                     },
                     {
-                        name: 'Japan',
-                        value: 'japan'
+                        name: 'Malang',
+                        value: 'Malang'
                     },
                     {
-                        name: 'Korea',
-                        value: 'korea'
+                        name: 'Bali',
+                        value: 'Bali'
+                    },
+                ],
+                jeniss: [{
+                        name: 'Private Trip',
+                        value: 'Private Trip'
+                    },
+                    {
+                        name: 'Group Trip',
+                        value: 'Group Trip'
+                    },
+                    {
+                        name: 'Open Trip',
+                        value: 'Open Trip'
+                    },
+                    {
+                        name: 'Transportation',
+                        value: 'Transportation'
                     },
                 ],
                 categories: [{
-                        name: 'Most Popular'
+                        name: '--Pilih Category--',
+                        value: '#'
                     },
                     {
-                        name: 'Newest'
+                        name: 'Harga',
+                        value: 'Harga'
                     },
                     {
-                        name: 'Best Seller'
+                        name: 'Jenis',
+                        value: 'Jenis'
                     },
                     {
-                        name: 'Low Price'
+                        name: 'Kota',
+                        value: 'Kota'
+                    },
+                    {
+                        name: 'Waktu',
+                        value: 'Waktu'
                     },
                 ],
                 navitems: [{

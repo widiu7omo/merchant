@@ -9,14 +9,13 @@
                         <h3 class="uk-margin-remove">Overlay Bottom</h3>
                         <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div> -->
-                        <ul class="uk-position-bottom uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
                             <a class="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous
                                 uk-slideshow-item="previous"></a>
                             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
                                 uk-slideshow-item="next"></a>
                     </li>
                 </ul>
-                
+                <ul class="uk-position-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul> 
             
             </div>
         </div>
