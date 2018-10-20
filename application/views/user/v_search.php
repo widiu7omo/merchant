@@ -3,10 +3,10 @@
         <navbar></navbar>
         <hr class="uk-margin-remove-top uk-margin-medium-bottom ">
           <div class="uk-text-center">
-                <h3 class="uk-text-bold">Daftar Penawaran Spesial</h3>
+                <h3 class="uk-text-bold">Hasil Pencarian</h3>
          </div>
          <hr class="uk-margin-remove-top uk-margin-small-bottom">
-            <cardlist :sub_base_url="base_url" :sub_main_url="main_url"></cardlist>
+            <searchlist :sub_base_url="base_url" :sub_main_url="main_url" ></searchlist>
         
          
     </div>
@@ -24,7 +24,7 @@
             },
             components: {
                  'navbar': httpVueLoader('<?php echo base_url("components/global/navbar.vue") ?>'),
-                 'cardlist': httpVueLoader('<?php echo base_url("components/listbycategory/cardlist.vue") ?>'),
+                 'searchlist': httpVueLoader('<?php echo base_url("components/global/search.vue") ?>'),
             }
         });
     </script>

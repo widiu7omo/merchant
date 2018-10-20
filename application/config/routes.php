@@ -82,6 +82,8 @@ $route['bussiness/(:any)/(:num)'] = 'user/C_bisnispage/$1/$2';
 $route['homepage/index'] = 'user/C_homepage';
 $route['category'] = 'user/C_kategori';
 $route['listcategories'] = 'user/C_listkategori';
+$route['search'] = 'user/C_search';
+
 $route['tours'] = 'user/C_optour';
 // Show offer
 $route['offer'] = 'user/C_showoffer';

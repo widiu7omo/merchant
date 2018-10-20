@@ -1,7 +1,7 @@
 <template>
    <div class="uk-container">
 
-       <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid>
+       <div class="uk-grid-small uk-child-width-1-3@s uk-text-center" uk-grid>
             <div v-for="(card, index) in cards" :key="index">
                 <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-padding-remove-top uk-padding-remove-right uk-padding-remove-left">
                     <a :href="sub_main_url+card.url"><img class="uk-border-rounded uk-width-1-1" :data-src="sub_base_url+'admintemplate/dist_view/img/'+card.image" :alt="card.title" 

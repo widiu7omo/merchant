@@ -47,7 +47,7 @@
                             <form class="uk-search uk-search-navbar uk-animation-sl ide-right uk-width-1-1 uk-margin-small-bottom">
                                 <div class="uk-flex uk-flex-center uk-width-1-1@s uk-width-1-1@m">
                                     <div class="uk-inline uk-width-1-2@m">
-                                        <a href="http://localhost/proto/merchant/index.php/listcategories" class="uk-search-icon-flip uk-padding-small" uk-search-icon></a>
+                                        <a href="http://localhost/proto/merchant/index.php/search" class="uk-search-icon-flip uk-padding-small" uk-search-icon></a>
                                         <input class="uk-search-input uk-padding-small" type="search" placeholder="Search..." autofocus style="border: 1px solid #e5e5e5; border-radius: 30px 30px 30px 30px;">
                                     </div>
                                 </div>
